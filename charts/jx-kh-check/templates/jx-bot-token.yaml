@@ -20,7 +20,6 @@ spec:
             memory: 15Mi
           limits:
             cpu: 40m
-        restartPolicy: Never
         env:
         - name: OAUTH_TOKEN
           valueFrom:
@@ -29,5 +28,6 @@ spec:
               name: tekton-git
         - name: GIT_PROVIDER
           value: {{ .Values.jxBotToken.gitProvider }}
+    restartPolicy: Never
     terminationGracePeriodSeconds: 60
 {{- end }}

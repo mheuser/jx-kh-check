@@ -20,7 +20,7 @@ spec:
             memory: 15Mi
           limits:
             cpu: 40m
-        restartPolicy: Never
+    restartPolicy: Never
     serviceAccountName: jx-webhook-sa
     terminationGracePeriodSeconds: 60
 ---
